@@ -11,19 +11,38 @@
     <link rel="stylesheet" href="../modules/layui-v2.9.13/dist/css/layui.css" />
     <!-- <link rel="stylesheet" href="../modules/layui-v2.9.13/dist/css/layui-theme-dark.css"> -->
     <link rel="stylesheet" href="../modules/global-style/style.css" />
-    <style>
-        a {
-            color:blue;
-            text-decoration:underline
-        }
-    </style>
+    <style>a{color:blue}</style>
 </head>
 
 <body class="layui-row font">
-    <!-- <div class="layui-col-xs6 layui-col-md12"> -->
-        <br>
-        <!-- <h2>抱歉，离线版还未发布，敬请期待&nbsp;<br><button class="layui-btn" onclick="history.back(-1);">返回上一页</button></h2> -->
-    <!-- </div> -->
+    <ul class="layui-nav font">
+        <li class="layui-nav-item">
+            <a href="javascript:;"><i class="layui-icon layui-icon-home"></i>&nbsp;SSS-Web</a>
+            <dl class="layui-nav-child">
+                <dd><a href="/"><i class="layui-icon layui-icon-home"></i>&nbsp;主页</a></dd>
+                <dd><a href="../update/"><i class="layui-icon layui-icon-file"></i>&nbsp;更新日志</a></dd>
+                <dd><a href="../download/"><i class="layui-icon layui-icon-download-circle"></i>&nbsp;离线版下载</a></dd>
+                <dd><a href="../video/"><i class="layui-icon layui-icon-video"></i>&nbsp;演示视频</a></dd>
+                <dd><a href="../mit/"><i class="layui-icon layui-icon-file-b"></i>&nbsp;MIT开源协议</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;"><i class="layui-icon layui-icon-github"></i>&nbsp;Github</a>
+            <dl class="layui-nav-child">
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystem" target="_blank"><i
+                            class="layui-icon layui-icon-website"></i>&nbsp;Web</a></dd>
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystemOF-CMD" target="_blank"><i
+                            class="layui-icon layui-icon-fonts-code"></i>&nbsp;CMD</a></dd>
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystemOF-GUI" target="_blank"><i
+                            class="layui-icon layui-icon-layouts"></i>&nbsp;GUI</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item" style="float: right;"><a href="javascript:setSettings();"><i
+                    class="layui-icon layui-icon-set"></i>&nbsp;设置</a></li>
+        <li class="layui-nav-item" style="float: right;"><a href="javascript:kqyContact();"><i
+                    class="layui-icon layui-icon-service"></i>&nbsp;联系我</a></li>
+    </ul>
+    <!-- <br> -->
     <div class="main-section" style="padding: 32px; line-height: 2;">
         <div class="layui-panel" >
             
@@ -52,7 +71,11 @@
                         <td>1</td>
                         <td>离线-GUI版</td>
                         <td><span class="layui-badge layui-bg-green">绿色版</span> v1.2.0 24w26a</td>
-                        <td><a class="content_blue" target="_blank" href="setups/gui/SSS-GUI v1.2.0.zip" download>SSS-GUI v1.2.0.zip</a></td>
+                        <td>
+                            <a class="content_blue" target="_blank" href="setups/gui/SSS-GUI v1.2.0.zip" download>官方源</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a class="content_blue" target="_blank" href="https://github.com/KQYKQY/SportScoreSystemOF-GUI/releases">GitHub镜像</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a class="content_blue" target="_blank" href="https://ksuser-kqy.lanzouv.com/b00b3ti6pe">蓝奏云镜像（密码：gws3）</a>
+                        </td>
                         <td>Python3 | HTML5</td>
                         <td>72774f771e0591e48ebf374fa9924a78</td>
                       </tr>
@@ -60,7 +83,11 @@
                         <td>2</td>
                         <td>离线-CMD版</td>
                         <td><span class="layui-badge layui-bg-orange">离线版</span> v1.1.0 24w25a</td>
-                        <td><a class="content_blue" target="_blank" href="setups/cmd/SSS-CMD v1.1.0.exe" download>SSS-CMD v1.1.0.exe</a></td>
+                        <td>
+                            <a class="content_blue" target="_blank" href="setups/cmd/SSS-CMD v1.1.0.exe" download>官方源</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a class="content_blue" target="_blank" href="https://github.com/KQYKQY/SportScoreSystemOF-CMD/releases">GitHub镜像</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a class="content_blue" target="_blank" href="https://ksuser-kqy.lanzouv.com/b00b3ti6od">蓝奏云镜像（密码：be9w）</a>
+                        </td>
                         <td>Python3</td>
                         <td>4478f721e9c74c336474b70b1ac0936d</td>
                       </tr>
@@ -68,15 +95,18 @@
                         <td>3</td>
                         <td>离线-GUI老版</td>
                         <td><span class="layui-badge layui-bg-orange">离线版</span> v1.0.0 24w25a</td>
-                        <td><a class="content_blue" target="_blank" href="setups/gui/SSS-GUI v1.0.0 setup.exe" download>SSS-GUI v1.0.0 setup.exe</a></td>
+                        <td><a class="content_blue" target="_blank" href="setups/gui/SSS-GUI v1.0.0 setup.exe" download>官方源</a></td>
                         <td>Electron | HTML5</td>
                         <td>869c5db1f87b84becb4003ad3b4d42c7</td>
                       </tr>
                       <tr>
                         <td>4</td>
                         <td>在线-Web版</td>
-                        <td><span class="layui-badge layui-bg-blue">在线版</span> v1.2.3 24w26a</td>
-                        <td><a class="content_blue" target="_blank" href="https://www.tsginkgo.cn/tools-kqy/sss/">https://www.tsginkgo.cn/tools-kqy/sss/</a></td>
+                        <td><span class="layui-badge layui-bg-blue">在线版</span> v1.2.4 24w28a</td>
+                        <td>
+                            <a class="content_blue" target="_blank" href="https://www.tsginkgo.cn/tools-kqy/sss/">Tsginkgo托管源</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a class="content_blue" target="_blank" href="https://kqykqy.github.io/SportScoreSystem/">GitHub托管源</a>
+                        </td>
                         <td>HTML5 | Javascript</td>
                         <td>\</td>
                       </tr>
@@ -90,6 +120,26 @@
         <button class="layui-btn" onclick="location.reload();">刷新页面</button>
     </div>
     
+    <!-- 设置 -->
+    <div id="pageSettings" class="font" style="display: none;">
+        <form class="layui-form layui-form-pane" method="post" target="nm_iframe">
+            <div class="layui-form-item" pane><label class="layui-form-label">暗黑模式</label>
+                <div class="layui-input-block" onclick="chooseDarkRadio();"><input id="darkmode_white" type="radio"
+                        name="darkmode" value="white" title="白天模式"><input id="darkmode_dark" type="radio"
+                        name="darkmode" value="dark" title="暗黑模式"><input id="darkmode_any" type="radio"
+                        name="darkmode" value="any" title="跟随系统" checked></div>
+            </div>
+            <div class="layui-form-item" pane>
+                <label class="layui-form-label">详细弹窗</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" id="specific-msg" name="specific-msg" lay-skin="switch" checked>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="contact-photo" style="display: none;">
+        <img src="../modules/image/contact.png" style="width: 200px;height: auto">
+    </div>
 
     <br><br><br><br><br><br>
     <footer class="footer-section contractMobile font">
@@ -106,47 +156,15 @@
                         邮箱：<a href="mailto:2765301200@qq.com">2765301200@qq.com</a></span></p>
                 <p><span>本程序遵守 <a href="mit/">MIT 开源协议</a></span></p>
                 <!-- <p><span>由 <a>2025届 高二1班 代文轩</a> 托管云服务</span></p> -->
-                <p><span>高中体育批量评分系统 2024年6月30日 版 &nbsp; v1.2.1</span></p>
+                <p><span>高中体育批量评分系统 2024年7月10日 版 &nbsp; v1.2.4</span></p>
             </div>
         </div>
     </footer>
     <script src="../modules/layui-v2.9.11/dist/layui.js"></script>
-    <script src="../modules/global-script/jquery.min.js"></script>
-    <script src="../modules/global-script/js.cookie.min.js"></script>
-    <script src="../modules/global-script/script.js"></script>
-    <script>
-        function loadCSS(href) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = href;
-            document.head.appendChild(link);
-        }
-
-        function removeCSS(href) {
-            var links = document.getElementsByTagName('link');
-            for (var i = 0; i < links.length; i++) {
-                if (links[i].getAttribute('rel') === 'stylesheet' && links[i].getAttribute('href') === href) {
-                    document.head.removeChild(links[i]);
-                    break;
-                }
-            }
-        }
-
-        const now = new Date().getHours();
-        const startDarkModeAt = 7;
-        const endDarkModeAt = 20;
-
-        if (now >= endDarkModeAt || now <= startDarkModeAt) {
-            loadCSS("../modules/layui-v2.9.13/dist/css/layui-theme-dark.css");
-            // document.getElementById("darkmode_dark").checked = true;
-            console.log(`${now}h now. Auto Dark mode ON.`);
-        } else {
-            removeCSS("../modules/layui-v2.9.13/dist/css/layui-theme-dark.css");
-            // document.getElementById("darkmode_white").checked = true;
-            console.log(`${now}h now. Auto Dark mode OFF.`);
-        }
-    </script>
+    <script src="../modules/global-script/global-nav.min.js"></script>
+    <!-- <script src="../modules/global-script/jquery.min.js"></script> -->
+    <!-- <script src="../modules/global-script/js.cookie.min.js"></script> -->
+    <!-- <script src="../modules/global-script/script.js"></script> -->
 </body>
 
 </html>

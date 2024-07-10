@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>高中体育批量评分系统在线版v1.2.3 24w26a(SSS) by KQY</title>
+    <title>高中体育批量评分系统在线版v1.2.4 24w28a(SSS) by KQY</title>
     <link rel="shortcut icon" href="modules/image/html_logo.svg">
     <link rel="stylesheet" href="modules/layui-v2.9.13/dist/css/layui.css" />
     <!-- <link rel="stylesheet" href="modules/layui-v2.9.13/dist/css/layui-theme-dark.css"> -->
@@ -17,33 +17,59 @@
 </head>
 
 <body>
-    <br>
+    <ul class="layui-nav font">
+        <li class="layui-nav-item">
+            <a href="javascript:;"><i class="layui-icon layui-icon-home"></i>&nbsp;SSS-Web</a>
+            <dl class="layui-nav-child">
+                <dd><a href="/"><i class="layui-icon layui-icon-home"></i>&nbsp;主页</a></dd>
+                <dd><a href="update/"><i class="layui-icon layui-icon-file"></i>&nbsp;更新日志</a></dd>
+                <dd><a href="download/"><i class="layui-icon layui-icon-download-circle"></i>&nbsp;离线版下载</a></dd>
+                <dd><a href="video/"><i class="layui-icon layui-icon-video"></i>&nbsp;演示视频</a></dd>
+                <dd><a href="mit/"><i class="layui-icon layui-icon-file-b"></i>&nbsp;MIT开源协议</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;"><i class="layui-icon layui-icon-github"></i>&nbsp;Github</a>
+            <dl class="layui-nav-child">
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystem" target="_blank"><i
+                            class="layui-icon layui-icon-website"></i>&nbsp;Web</a></dd>
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystemOF-CMD" target="_blank"><i
+                            class="layui-icon layui-icon-fonts-code"></i>&nbsp;CMD</a></dd>
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystemOF-GUI" target="_blank"><i
+                            class="layui-icon layui-icon-layouts"></i>&nbsp;GUI</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item" style="float: right;"><a href="javascript:setSettings();"><i
+                    class="layui-icon layui-icon-set"></i>&nbsp;设置</a></li>
+        <li class="layui-nav-item" style="float: right;"><a href="javascript:kqyContact();"><i
+                    class="layui-icon layui-icon-service"></i>&nbsp;联系我</a></li>
+    </ul>
+    <!-- <br> -->
     <iframe id="nm_iframe" name="nm_iframe" style="display: none;"></iframe>
     <div class="main-section">
-        <fieldset class="layui-elem-field font">    
-            <legend>高中体育批量评分系统（SSS） v1.2.3 24w26a [2024年6月30日]</legend>
+        <fieldset class="layui-elem-field font">
+            <legend><i class="layui-icon layui-icon-website" style="font-size: 25px;"></i>高中体育批量评分系统（SSS） v1.2.4 24w28a For Web [2024年7月10日]</legend>
             <div class="layui-field-box">
                 <div class="layui-container">
                     <blockquote class="layui-elem-quote">
-                        · 初次使用前需查看<a href="javascript:stick_single_tips();" class="content_red" style="color: red;"> 单项模式使用说明</a>与 <a
-                            href="javascript:stick_variety_tips();" class="content_red" style="color: red;"> 综合模式使用说明 </a><a
-                            href="video"  style="color: rgb(255, 187, 0);"> [观看演示视频] </a>
+                        · 初次使用前需查看<a href="javascript:stick_single_tips();" class="content_red" style="color: red;">
+                            单项模式使用说明</a>与 <a href="javascript:stick_variety_tips();" class="content_red"
+                            style="color: red;"> 综合模式使用说明 </a><a href="video" style="color: rgb(255, 187, 0);"> [观看演示视频]
+                        </a>
                         &nbsp; （请在PC段查阅，移动端点击<a href="modules/image/stick-phone-example.png" target="_blank"
-                            class="content_blue" style="color: blue;">此处</a>查看图片或<a href="video"
-                            class="content_blue" style="color: blue;">观看演示视频</a>）
-                            <br>
-                            · 不知道Excel表格该怎么写？数据该怎样排版？划档困难，快点击蓝字下载 <a href="download/files/SSS体测登记模板[v1.1.0].xlsx" target="_blank"
-                            class="content_blue" style="color: blue;">SSS体测登记模板[v1.1.0].xlsx</a>
-                            <br>
-                            · 离线CMD版已支持最新外挂JSON评分文件，未来在线版与离线GUI版也将搭载：前瞻请看： <a href="download/files/Standards[v1.2.0].json" target="_blank"
-                            class="content_blue" style="color: blue;">Standards[v1.2.0].json</a>
-                            <br>
-                            · 想知道最近又更新了点什么吗？<a href="update/" 
-                            class="content_blue" style="color: blue;">查看更新日志</a>
-                            <br>
-                            · 担心没网就无法使用？服务器突然停机？快点击蓝字下载 
-                            <a href="download/" 
-                            class="content_blue" style="color: blue;">SSS离线版</a>
+                            class="content_blue" style="color: blue;">此处</a>查看图片或<a href="video" class="content_blue"
+                            style="color: blue;">观看演示视频</a>）
+                        <br>
+                        · 不知道Excel表格该怎么写？数据该怎样排版？划档困难，快点击蓝字下载 <a href="download/files/SSS体测登记模板[v1.1.0].xlsx"
+                            target="_blank" class="content_blue" style="color: blue;">SSS体测登记模板[v1.1.0].xlsx</a>
+                        <br>
+                        · 离线CMD版已支持最新外挂JSON评分文件，未来在线版与离线GUI版也将搭载：前瞻请看： <a href="download/files/Standards[v1.2.0].json"
+                            target="_blank" class="content_blue" style="color: blue;">Standards[v1.2.0].json</a>
+                        <br>
+                        · 想知道最近又更新了点什么吗？<a href="update/" class="content_blue" style="color: blue;">查看更新日志</a>
+                        <br>
+                        · 担心没网就无法使用？服务器突然停机？快点击蓝字下载
+                        <a href="download/" class="content_blue" style="color: blue;">SSS离线版</a>
                     </blockquote>
                     <!-- <textarea id="inputData" placeholder="请输入数据(Excel直接粘贴一列)"></textarea>   -->
                     <form class="layui-form layui-form-pane" method="post" target="nm_iframe">
@@ -54,34 +80,20 @@
                                 <input id="catype_variety" type="radio" name="catype" value="variety" title="综合模式">
                             </div>
                         </div>
-                        <div class="layui-form-item" pane>
+                        <!-- <div class="layui-form-item" pane>
                             <label class="layui-form-label">默认标准</label>
                             <div class="layui-input-block">
                                 <input type="checkbox" name="standard-from" lay-skin="switch" checked disabled>
-                            </div>
-                        </div>
-                        <!-- <div class="layui-form-item" pane>
-                            <label class="layui-form-label">自传标准</label>
-                            <div class="layui-upload-drag" id="upload-standard">
-                                <i class="layui-icon">&#xe67c;</i>
-                                <p>点击上传，或将文件拖拽到此处</p>
+                                高中学生评价标准
+                                <button type="button" class="layui-btn demo-class-accept" lay-options="{
+                                    accept: 'file',
+                                    exts: 'zip|rar|7z'
+                                  }">
+                                    <i class="layui-icon layui-icon-upload"></i> 
+                                    只允许压缩文件
+                                </button>
                             </div>
                         </div> -->
-                        <div class="layui-form-item" pane>
-                            <label class="layui-form-label"><span
-                                    class="layui-badge layui-bg-orange">新</span>暗黑模式</label>
-                            <div class="layui-input-block" onclick="checkdarkmode();">
-                                <input id="darkmode_white" type="radio" name="darkmode" value="white" title="白天模式">
-                                <input id="darkmode_dark" type="radio" name="darkmode" value="dark" title="暗黑模式">
-                                <input id="darkmode_any" type="radio" name="darkmode" value="any" title="跟随系统" checked>
-                            </div>
-                        </div>
-                        <div class="layui-form-item" pane>
-                            <label class="layui-form-label">详细弹窗</label>
-                            <div class="layui-input-block">
-                                <input type="checkbox" id="specific-msg" name="specific-msg" lay-skin="switch" checked>
-                            </div>
-                        </div>
                         <div class="layui-form-item" id="sex-label" pane>
                             <label class="layui-form-label">性别</label>
                             <div class="layui-input-block" id="sex-input" onclick="checksex();">
@@ -162,68 +174,25 @@
         <fieldset class="layui-elem-field font">
             <table id="opt-put-table"></table>
         </fieldset>
-
-        <!-- <fieldset class="layui-elem-field font">
-            <legend>结果输出区域</legend>
-            <div class="layui-field-box">
-                <div class="layui-container">
-                    <div class="layui-row">
-                        <div class="layui-col-md4">
-                            <label class="layui-form-label">搜索<i class="layui-icon">&#xe615;</i></label>
-                            <div class="layui-input-inline" style="width: 266px;">
-                                <input type="text" class="layui-input" id="searchInput" placeholder="暂仅支持搜索序号...">
-                            </div>
-                        </div>
-                        <div class="layui-col-md8"><label class="layui-form-label">排序<i
-                                    class="layui-icon">&#xe632;</i></label>
-                            <button class="layui-btn" onclick="sortTable(0);">按序号排序</button>
-                            <button class="layui-btn" onclick="sortTable(1);">按个数&时间排序</button>
-                            <button class="layui-btn" onclick="sortTable(2);">按对应分数排序</button>
-                        </div>
-                    </div>
-
-
-                    <table class="layui-table" id="outputTable">
-                        <colgroup>
-                            <col width="150">
-                            <col width="150">
-                            <col>
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th title="点击排序" class="sorted-asc" onclick="sortTable(0);">序号</th>
-                                <th title="点击排序" class="sorted-desc" onclick="sortTable(1);">个数&时间</th>
-                                <th title="点击排序" onclick="sortTable(2);">对应分数</th>
-
-                            </tr>
-                        </thead>
-                        <tbody id="outputBody">
-                            <tr>
-                                <td>1</td>
-                                <td>None</td>
-                                <td>None</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </fieldset> -->
-
     </div>
 
     <div class="other-section">
-        <div class="menu-box">
-            <div class="menu-button">
-                <div class="line-box">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+        <!-- 设置 -->
+        <div id="pageSettings" class="font" style="display: none;">
+            <form class="layui-form layui-form-pane" method="post" target="nm_iframe">
+                <div class="layui-form-item" pane><label class="layui-form-label">暗黑模式</label>
+                    <div class="layui-input-block" onclick="checkdarkmode();"><input id="darkmode_white" type="radio"
+                            name="darkmode" value="white" title="白天模式"><input id="darkmode_dark" type="radio"
+                            name="darkmode" value="dark" title="暗黑模式"><input id="darkmode_any" type="radio"
+                            name="darkmode" value="any" title="跟随系统" checked></div>
                 </div>
-            </div>
-            <ul class="menu-list font">
-                <li onclick="set_settings();"><i class="layui-icon">&#xe614;</i> <span>设置</span></li>
-                <li onclick="open_contact();"><i class="layui-icon">&#xe64c;</i> <span>联系我</span></li>
-            </ul>
+                <div class="layui-form-item" pane>
+                    <label class="layui-form-label">详细弹窗</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" id="specific-msg" name="specific-msg" lay-skin="switch" checked>
+                    </div>
+                </div>
+            </form>
         </div>
         <div id="contact-photo" style="display: none;">
             <img src="modules/image/contact.png" style="width: 200px;height: auto">
@@ -288,34 +257,33 @@
             <div class="_1cYlJ">
                 <p><span><a href="https://tszx.chneic.sh.cn/" target="_blank"> <img src="modules/image/logo.png"
                                 width="250px"></a></span></p>
-<!--                 <p><a target="_blank" rel="noopener"
-                        href="https://beian.miit.gov.cn/"><span>沪ICP备2023008964号-1</span></a> &nbsp; <a target="_blank"
-                        rel="noopener"
-                        href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702007683"><img
-                            class="icp-icon" src="modules/image/gongan.png"><span>沪公网安备 31010702007683号</span></a></p> -->
+
                 <p><span>由 <a href="https://space.bilibili.com/481168854" target="_blank">2025届 高二2班 金阳</a> 编写 &nbsp;
                         邮箱：<a href="mailto:2765301200@qq.com">2765301200@qq.com</a></span></p>
                 <p><span>本程序遵守 <a href="mit/">MIT 开源协议</a></span></p>
                 <!-- <p><span>由 <a>2025届 高二1班 代文轩</a> 托管云服务</span></p> -->
-                <p><span>高中体育批量评分系统 2024年6月30日 版 &nbsp; v1.2.3 24w26a</span></p>
+                <p><span>高中体育批量评分系统 2024年7月10日 版 &nbsp; v1.2.4 24w28a</span></p>
             </div>
         </div>
     </footer>
 
     <script type="text/html" id="table-tool-bar">
-        <div class="layui-btn-container">
+        <div class="layui-btn-container font">
             <button class="layui-btn layui-btn-primary layui-border" onclick="copy('variety');">复制结果[全部]</button>
             <button class="layui-btn layui-btn-primary layui-border" onclick="copy('score');">仅成绩</button>
             <button class="layui-btn layui-btn-primary layui-border" onclick="copy('all');">个数+成绩</button>
-           
+            <button class="layui-btn" onclick="autoScoreHighlight();">自动划档</button>
         </div>
     </script>
     <script src="modules/layui-v2.9.11/dist/layui.js"></script>
-    <script src="modules/global-script/jquery.min.js"></script>
+    <!-- <script src="modules/global-script/jquery.min.js"></script> -->
     <script src="modules/global-script/js.cookie.min.js"></script>
     <script src="modules/global-script/script.js"></script>
     <script>
-        console.log("\n\x1b[33m %s \x1b[0m\n", "Welcome to use SSS-ONLINE v1.2.3 - Made by Ksuserkqy");
+        console.log("\n\x1b[33m %s \x1b[0m\n", "Welcome to use SSS-ONLINE v1.2.4 - Made by Ksuserkqy");
+
+        var $ = layui.jquery,
+        layer = layui.layer;
 
         const now = new Date().getHours();
         const startDarkModeAt = 7;
@@ -327,16 +295,18 @@
             document.getElementById("darkmode_dark").checked = true;
             console.log(`${now}h now. Auto Dark mode ON.`);
         } else {
-            removeCSS("modules/layui-v2.9.13/dist/css/layui-theme-dark.css")
+            removeCSS("modules/layui-v2.9.13/dist/css/layui-theme-dark.css");
             document.getElementById("darkmode_white").checked = true;
             console.log(`${now}h now. Auto Dark mode OFF.`);
         }
 
-        
+
         chooseMemory();
         checkdarkmode();
         checkcatype();
-        if (checkRadio("catype") == "single") { checksex(); }
+        if (checkRadio("catype") == "single") {
+            checksex();
+        }
     </script>
 </body>
 

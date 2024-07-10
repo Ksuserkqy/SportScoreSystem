@@ -1,5 +1,5 @@
 // Script.js by Ksuserkqy for SSS
-// 2024.6.30
+// 2024.7.20
 // MIT Licensed
 
 
@@ -107,14 +107,6 @@ function table_refresh(show_data, show_cols=null) {
 
 
 
-// 要操作的元素
-const menu_box = document.querySelector('.menu-box');
-const menu_button = document.querySelector('.menu-button');
-
-// 为菜单按钮绑定点击事件
-menu_button.addEventListener('click', function () {
-    menu_box.classList.toggle('active');
-})
 // var select = document.getElementById('sex-input');
 // var options = select.getElementsByTagName('option');
 // for (var i = 1; i < options.length; i++) {
@@ -202,7 +194,7 @@ function changeStandard() {
     layer.msg('暂不支持修改，请等待后续更新~');
 }
 
-function open_contact() {
+function kqyContact() {
     layer.open({
         type: 1,
         title: false,
@@ -214,8 +206,33 @@ function open_contact() {
     });
 }
 
-function set_settings() {
-    layer.msg('暂不支持修改，请等待后续更新~');
+function setSettings() {
+    layer.open({
+        title: '设置',
+        shade: 0.6, // 遮罩透明度
+        shadeClose: true, // 点击遮罩区域，关闭弹层
+        anim: 0, // 0-6 的动画形式，-1 不开启
+        type: 1,
+        skin: 'layui-layer-rim',
+        area: ['470px', '160px'],
+        content: $('#pageSettings'),
+        maxmin: true,
+        minStack: false, //最小化不堆叠在左下角
+        id: 'pageSettings', //定义 ID，防止重复弹出
+        min: function (layero, index) {
+
+            layer.msg('阻止了默认的最小化');
+            layer.style(index, {
+                top: 'auto',
+                bottom: 0
+            });
+
+            return false;
+        },
+        end: function () {
+            $("#pageSettings").hide();
+        }
+    });
 }
 
 function checkRadio(name) {
@@ -401,7 +418,7 @@ function Calculate() {
                 copyResult_all = `${copyResult_all}${num1}\t${score1}\t${num2}\t${score2}\t${num3}\t${score3}\t${num4}\t${score4}\t${num5}\t${score5}\t${num6}\t${score6}\n`;
                 copyResult_score = `${copyResult_score}${score1}\t${score2}\t${score3}\t${score4}\t${score5}\t${score6}\n`;
                 copyResult_variety = `${copyResult_variety}${id}\t${show_sex}\t${num1}\t${score1}\t${num2}\t${score2}\t${num3}\t${score3}\t${num4}\t${score4}\t${num5}\t${score5}\t${num6}\t${score6}\n`;
-                console.log(copyResult_all, copyResult_score, copyResult_variety);
+                // console.log(copyResult_all, copyResult_score, copyResult_variety);
             }
             showData.push(newData);
             // console.log(showData, newData);
@@ -448,6 +465,7 @@ function stick_variety_tips() {
     layer.open({
         title: '综合模式使用教程',
         type: 1,
+        shadeClose: true, // 点击遮罩区域，关闭弹层
         skin: 'layui-layer-rim',
         area: ['1000px', '580px'],
         content: $('#stick-variety-tips'),
@@ -474,6 +492,7 @@ function stick_single_tips() {
     layer.open({
         title: '单项模式使用教程',
         type: 1,
+        shadeClose: true, // 点击遮罩区域，关闭弹层
         skin: 'layui-layer-rim',
         area: ['1000px', '580px'],
         content: $('#stick-single-tips'),
@@ -678,5 +697,45 @@ function checkdarkmode() {
         }
         // Cookies.set("sss_darkmode", "any", { expires: 31 });
 
+    }
+}
+
+// 自动滑档：
+function autoScoreHighlight() {  
+    const catype = checkRadio("catype");
+    if (catype == "single") {
+        scoreHighlight("laytable-cell-1-0-4");
+    } else {
+        scoreHighlight("laytable-cell-1-0-4");
+        scoreHighlight("laytable-cell-1-0-6");
+        scoreHighlight("laytable-cell-1-0-8");
+        scoreHighlight("laytable-cell-1-0-10");
+        scoreHighlight("laytable-cell-1-0-12");
+        scoreHighlight("laytable-cell-1-0-14");
+    }
+}
+
+function scoreHighlight(className)  {
+    const divs = document.getElementsByClassName(className);
+    for (let i = 0; i < divs.length; i++) {
+        // console.log();
+        if (divs[i].textContent.trim().indexOf("成绩")===-1){
+            const score = parseInt(divs[i].textContent.trim(), 10);
+            if (isNaN(score) || score=="" || score==" " || score=="\\" || score=="/") {
+                divs[i].classList.add("score-gray");
+            } else {
+                if (score >= 90) {
+                    // green
+                    divs[i].classList.add("score-green");
+                } else if (score < 90 && score >= 80) {
+                    // orange
+                    divs[i].classList.add("score-yellow");
+                } else if (score < 60) {
+                    // red
+                    divs[i].classList.add("score-red");
+                }
+            }
+        }
+        
     }
 }
