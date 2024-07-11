@@ -1,0 +1,11 @@
+.video-player {
+    width: 80em;
+    text-align: center;
+    position: relative;
+}
+
+.player {
+    padding: 1em;
+    /* text-align: center; */
+    position: relative;
+}
