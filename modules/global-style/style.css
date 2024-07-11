@@ -1,0 +1,143 @@
+/* Style.css by Ksuserkqy for SSS */
+/* 2024.7.20 */
+/* MIT Licensed */
+
+@charset "UTF-8";
+
+* {
+    margin: 0;
+}
+
+header {
+    background-color: gray;
+}
+
+.main-section {
+    padding: 20px;
+}
+
+.other-section .footer-section {
+    padding: 0;
+}
+
+/* @font-face {
+    font-family: HarmonyOS-Sans-SC;
+    src: url(../font/HarmonyOS_Sans_SC_Medium.ttf);
+} */
+
+@font-face {
+    font-family: Alibaba-web;
+    src: url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3/AlibabaPuHuiTi-3-55-RegularL3/AlibabaPuHuiTi-3-55-RegularL3.ttf);
+}
+
+@font-face {
+    font-family: Alibaba-local;
+    src: url(../font/Alibaba-PuHuiTi-Medium.ttf);
+}
+
+.font {
+    font-family: 'Alibaba-local', 'Alibaba-web', sans-serif;
+
+}
+
+@keyframes fade-in-item {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.sUELB {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+._3c2cp {
+    display: block;
+    width: 140px;
+    margin-bottom: 24px;
+}
+
+._3c2cp img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+._2HR2_ {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: self-start;
+    align-items: self-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex: 1 1;
+    flex: 1 1;
+}
+
+._29g9u {
+    margin-right: 10px;
+}
+
+._29g9u ._3rB7B {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 24px;
+    white-space: nowrap;
+}
+
+._29g9u img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 4px;
+}
+
+._1cYlJ {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #666;
+    padding-top: 32px;
+    border-top: 1px solid #262626;
+}
+
+._1cYlJ p {
+    margin-bottom: 10px;
+}
+
+._1cYlJ a {
+    color: #666;
+}
+
+@media (max-width: 1330px) {
+    .sUELB {
+        width: 100%;
+        padding: 0 24px;
+    }
+}
+
+.score-green {
+    color: #328a30;
+    background-color: #c6efcd !important;
+}
+
+.score-yellow {
+    color: #b46f1b;
+    background-color: #feeb9c !important;
+}
+
+.score-red {
+    color: #ba4351;
+    background-color: #fec9cb !important;
+}
+
+.score-gray {
+    background-color: #d9d9d9 !important;
+}
