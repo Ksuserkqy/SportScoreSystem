@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<!-- made by KQY -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>SSS更新日志 - 高中体育批量评分系统 (SSS) by KQY</title>
+    <link rel="shortcut icon" href="../modules/image/html_logo.svg">
+    <link rel="stylesheet" href="../modules/layui-v2.9.13/dist/css/layui.css" />
+    <!-- <link rel="stylesheet" href="../modules/layui-v2.9.13/dist/css/layui-theme-dark.css"> -->
+    <link rel="stylesheet" href="../modules/global-style/style.css" />
+
+</head>
+
+<body class="layui-row">
+    <ul class="layui-nav font">
+        <li class="layui-nav-item">
+            <a href="javascript:;"><i class="layui-icon layui-icon-home"></i>&nbsp;SSS-Web</a>
+            <dl class="layui-nav-child">
+                <dd><a href="/"><i class="layui-icon layui-icon-home"></i>&nbsp;主页</a></dd>
+                <dd><a href="../update/"><i class="layui-icon layui-icon-file"></i>&nbsp;更新日志</a></dd>
+                <dd><a href="../download/"><i class="layui-icon layui-icon-download-circle"></i>&nbsp;离线版下载</a></dd>
+                <dd><a href="../video/"><i class="layui-icon layui-icon-video"></i>&nbsp;演示视频</a></dd>
+                <dd><a href="../mit/"><i class="layui-icon layui-icon-file-b"></i>&nbsp;MIT开源协议</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;"><i class="layui-icon layui-icon-github"></i>&nbsp;Github</a>
+            <dl class="layui-nav-child">
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystem" target="_blank"><i
+                            class="layui-icon layui-icon-website"></i>&nbsp;Web</a></dd>
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystemOF-CMD" target="_blank"><i
+                            class="layui-icon layui-icon-fonts-code"></i>&nbsp;CMD</a></dd>
+                <dd><a href="https://github.com/KQYKQY/SportScoreSystemOF-GUI" target="_blank"><i
+                            class="layui-icon layui-icon-layouts"></i>&nbsp;GUI</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item" style="float: right;"><a href="javascript:setSettings();"><i
+                    class="layui-icon layui-icon-set"></i>&nbsp;设置</a></li>
+        <li class="layui-nav-item" style="float: right;"><a href="javascript:kqyContact();"><i
+                    class="layui-icon layui-icon-service"></i>&nbsp;联系我</a></li>
+    </ul>
+    <!-- <br> -->
+    <iframe id="nm_iframe" name="nm_iframe" style="display: none;"></iframe>
+
+    <div class="main-section font">
+        <div class="layui-field-box">
+            <div class="layui-container">
+                
+                <!-- <textarea id="inputData" placeholder="请输入数据(Excel直接粘贴一列)"></textarea>   -->
+                <form class="layui-form layui-form-pane" method="post" target="nm_iframe">
+                    <div class="layui-form-item" pane>
+                        <label class="layui-form-label">版本</label>
+                        <div class="layui-input-block" id="version-input" onclick="checkVersion();">
+                            <input id="version_online" type="radio" name="version" value="online" title="在线版" checked>
+                            <input id="version_offline" type="radio" name="version" value="offline-gui" title="离线版-GUI">
+                            <input id="version_offline" type="radio" name="version" value="offline-cmd" title="离线版-CMD">
+                        </div>
+                    </div>
+                    </form>
+
+                    <blockquote id="online-update" class="layui-elem-quote">
+                        <h3>在线版更新日志：</h3>
+                        <div id="1.2.4-online">
+                            <h4><span class="layui-badge layui-bg-gray">v1.2.4 24w28a</span>&nbsp;&nbsp;&nbsp;2024年7月10日 更新</h4>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了自动划档功能，可根据计算出的分数自动判断分段并标注</p>
+                            <p><span class="layui-badge layui-bg-blue">更改</span>&nbsp;&nbsp;&nbsp;将暗黑模式与详细弹窗选项移至右下角的设置功能中，界面更简洁</p>
+                            <p><span class="layui-badge layui-bg-blue">更改</span>&nbsp;&nbsp;&nbsp;暂时取消自选标准功能，待该功能完善后再考虑开放</p>
+                            <p><span class="layui-badge">修复</span>&nbsp;&nbsp;&nbsp;修复了移动设备下打开弹窗点击屏幕空白处无法关闭的问题</p>
+                        </div>
+                        <br><br>
+                        <div id="1.2.3-online">
+                            <h4><span class="layui-badge layui-bg-gray">v1.2.3 24w26a</span>&nbsp;&nbsp;&nbsp;2024年6月30日 更新</h4>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了自动暗黑模式，晚上8点至次日7点均自动调为暗黑模式</p>
+                            <p><span class="layui-badge">修复</span>&nbsp;&nbsp;&nbsp;修复了页面暗黑模式显示异常的问题</p>
+                        </div>
+                        <br><br>
+                        <div id="1.2.2-online">
+                            <h4><span class="layui-badge layui-bg-gray">v1.2.2 24w25c</span>&nbsp;&nbsp;&nbsp;2024年6月20日 更新</h4>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了自适应表格，会根据所选模式自动更换表头内容</p>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了饼干存储模式，可记忆对暗黑模式的选择</p>
+                            <p><span class="layui-badge layui-bg-blue">更改</span>&nbsp;&nbsp;&nbsp;将核心评分模块与排版样式模块分离，计算代码优化，速度提高</p>
+                            <p><span class="layui-badge">修复</span>&nbsp;&nbsp;&nbsp;修复了50米与耐力跑项目填写“0”时判分为100的情况，将统一判为0分</p>
+                        </div>
+                        <br><br>
+                        <div id="1.2.1-online">
+                            <h4><span class="layui-badge layui-bg-gray">v1.2.1 24w25b</span>&nbsp;&nbsp;&nbsp;2024年6月18日 更新</h4>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了"SSS体测登记模板"以供更好地使用本系统</p>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了暗黑模式</p>
+                            <!-- <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了饼干存储模式，可记忆对暗黑模式的选择</p> -->
+                            <p><span class="layui-badge layui-bg-blue">更改</span>&nbsp;&nbsp;&nbsp;更改的输出列表的表名，使各项目看起来更加直观</p>
+                            <p><span class="layui-badge">修复</span>&nbsp;&nbsp;&nbsp;修复了页面排版异常的问题</p>
+                        </div>
+                        <br><br>
+                        <div id="1.2.0-online">
+                            <h4><span class="layui-badge layui-bg-gray">v1.2.0 24w25a</span>&nbsp;&nbsp;&nbsp;2024年6月17日 更新</h4>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了综合模式，原输入方式更改为单项模式</p>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了操作演示视频与操作演示图文</p>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了更全面的表格，增加表格排序功能、一键输出xls\csv文件，一键打印等功能</p>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了一键开关详细弹窗功能，节省计算时间</p>
+                            <p><span class="layui-badge layui-bg-blue">更改</span>&nbsp;&nbsp;&nbsp;优化了计算逻辑，提高计算效率</p>
+                            <p><span class="layui-badge">修复</span>&nbsp;&nbsp;&nbsp;修复了耐力跑项目分数判断错误的问题</p>
+                        </div>
+                        <br><br>
+                        <div id="1.1.0-online">
+                            <h4><span class="layui-badge layui-bg-gray">v1.1.0 24w24a</span>&nbsp;&nbsp;&nbsp;2024年6月15日 更新</h4>
+                            <p><span class="layui-badge layui-bg-green">诞生</span>&nbsp;&nbsp;&nbsp;高中体育批量评分系统（SSS） 正式诞生</p>
+                        </div>
+                    </blockquote>
+                    <blockquote id="offline-gui-update" class="layui-elem-quote">
+                        <h3><a href="../download/">离线GUI版更新日志：</a></h3>
+                        <div id="1.2.0 offline gui">
+                            <h4><span class="layui-badge layui-bg-gray">v1.2.0 24w26a</span>&nbsp;&nbsp;&nbsp;2024年6月30日 更新</h4>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了自动暗黑模式，晚上8点至次日7点均自动调为暗黑模式</p>
+                            <p><span class="layui-badge layui-bg-blue">更改</span>&nbsp;&nbsp;&nbsp;修改了程序封装逻辑，大幅减少文件大小与响应速度</p>
+                            <p><span class="layui-badge layui-bg-blue">更改</span>&nbsp;&nbsp;&nbsp;安装方式更改为绿色版，方便通过移动存储介质携带</p>
+                            <p><span class="layui-badge">修复</span>&nbsp;&nbsp;&nbsp;修复了安装与卸载过程中可能出现的闪退问题</p>
+                        </div>
+                        <br><br>
+                        <div id="1.1.0 offline gui">
+                            <h4><span class="layui-badge layui-bg-gray">v1.1.0 24w25a</span>&nbsp;&nbsp;&nbsp;2024年6月20日 更新</h4>
+                            <p><span class="layui-badge layui-bg-green">诞生</span>&nbsp;&nbsp;&nbsp;SSS离线GUI版 正式诞生，适用于无Wifi环境下的使用</p>
+                            
+                        </div>
+                    </blockquote>
+                    <blockquote id="offline-cmd-update" class="layui-elem-quote">
+                        <h3><a href="../download/">离线CMD版更新日志：</a></h3>
+                        <div id="1.1.0 offline cmd">
+                            <h4><span class="layui-badge layui-bg-gray">v1.1.0 24w26a</span>&nbsp;&nbsp;&nbsp;2024年6月24日 更新</h4>
+                            <p><span class="layui-badge layui-bg-green">诞生</span>&nbsp;&nbsp;&nbsp;SSS离线CMD版 正式诞生，适用于无Wifi环境下的使用的极简命令行版本</p>
+                            <p><span class="layui-badge layui-bg-orange">新增</span>&nbsp;&nbsp;&nbsp;新增了外挂JSON评分文件，可支持按照自给标准评分</p>
+                        </div>
+                    </blockquote>
+                    <br><br>
+                    
+
+                    <div class="layui-form-item">
+                        <!-- <div class="layui-input-block"> -->
+                        <button class="layui-btn layui-btn-normal" onclick="history.go(-1);">返回上一页</button>
+                        <!-- <button type="reset" class="layui-btn layui-btn-primary">重置输入</button> -->
+                        <button class="layui-btn layui-btn-warm" onclick="window.location.href='../';">返回主页</button>
+                        <button class="layui-btn" onclick="location.reload();">刷新页面</button>
+                        <!-- </div> -->
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- 设置 -->
+    <div id="pageSettings" class="font" style="display: none;">
+        <form class="layui-form layui-form-pane" method="post" target="nm_iframe">
+            <div class="layui-form-item" pane><label class="layui-form-label">暗黑模式</label>
+                <div class="layui-input-block" onclick="chooseDarkRadio();"><input id="darkmode_white" type="radio"
+                        name="darkmode" value="white" title="白天模式"><input id="darkmode_dark" type="radio"
+                        name="darkmode" value="dark" title="暗黑模式"><input id="darkmode_any" type="radio"
+                        name="darkmode" value="any" title="跟随系统" checked></div>
+            </div>
+            <div class="layui-form-item" pane>
+                <label class="layui-form-label">详细弹窗</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" id="specific-msg" name="specific-msg" lay-skin="switch" checked>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="contact-photo" style="display: none;">
+        <img src="../modules/image/contact.png" style="width: 200px;height: auto">
+    </div>
+
+    <footer class="footer-section contractMobile font">
+        <div class="sUELB">
+            <div class="_1cYlJ">
+                <p><span><a href="https://tszx.chneic.sh.cn/" target="_blank"> <img src="../modules/image/logo.png"
+                                width="250px"></a></span></p>
+                <!-- <p><a target="_blank" rel="noopener"
+                        href="https://beian.miit.gov.cn/"><span>沪ICP备2023008964号-1</span></a> &nbsp; <a target="_blank"
+                        rel="noopener"
+                        href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702007683"><img
+                            class="icp-icon" src="../modules/image/gongan.png"><span>沪公网安备 31010702007683号</span></a></p> -->
+                <p><span>由 <a href="https://space.bilibili.com/481168854" target="_blank">2025届 高二2班 金阳</a> 编写 &nbsp;
+                        邮箱：<a href="mailto:2765301200@qq.com">2765301200@qq.com</a></span></p>
+                <p><span>本程序遵守 <a href="../mit/">MIT 开源协议</a></span></p>
+                <!-- <p><span>由 <a>2025届 高二1班 代文轩</a> 托管云服务</span></p> -->
+                <p><span>高中体育批量评分系统 2024年7月10日 版 &nbsp; v1.2.4</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../modules/layui-v2.9.11/dist/layui.js"></script>
+    <script src="../modules/global-script/global-nav.min.js"></script>
+    <!-- <script src="../modules/global-script/js.cookie.min.js"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>

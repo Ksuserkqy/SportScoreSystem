@@ -1,0 +1,38 @@
+{
+    "online-web": {
+        "version_name": "在线版",
+        "version": "v1.2.3",
+        "date": "24w26a",
+        "update_date": "2024年6月30日",
+        "details": {
+            "new": ["新增了自动暗黑模式，晚上8点至次日7点均自动调为暗黑模式"],
+            "change": [],
+            "fix": ["修复了页面暗黑模式显示异常的问题"],
+            "bear": []
+        }
+    },
+    "offline-gui": {
+        "version_name": "离线GUI版",
+        "version": "v1.2.0",
+        "date": "24w26a",
+        "update_date": "2024年6月30日",
+        "details": {
+            "new": ["新增了自动暗黑模式，晚上8点至次日7点均自动调为暗黑模式"],
+            "change": ["修改了程序封装逻辑，大幅减少文件大小与响应速度", "安装方式更改为绿色版，方便通过移动存储介质携带"],
+            "fix": ["修复了安装与卸载过程中可能出现的闪退问题"],
+            "bear": []
+        }
+    },
+    "offline-cmd": {
+        "version_name": "离线CMD版",
+        "version": "v1.1.0",
+        "date": "24w26a",
+        "update_date": "2024年6月24日",
+        "details": {
+            "new": ["新增了外挂JSON评分文件，可支持按照自给标准评分"],
+            "change": [],
+            "fix": [],
+            "bear": ["SSS离线CMD版 正式诞生，适用于无Wifi环境下的使用的极简命令行版本"]
+        }
+    }
+}   
