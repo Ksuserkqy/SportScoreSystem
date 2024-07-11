@@ -55,8 +55,8 @@
 ![standard-grade3](https://www.tsginkgo.cn/tools-kqy/sss/modules/image/standard-grade3.png)
 
 ## 使用须知
-需搭配 [`SSS体测登记模板[v1.1.0].xlsx`  点我下载](https://www.tsginkgo.cn/tools-kqy/sss/download/files/SSS%E4%BD%93%E6%B5%8B%E7%99%BB%E8%AE%B0%E6%A8%A1%E6%9D%BF[v1.1.0].xlsx) 使用
-评分细则 `json` 文件详见 [`Standards[v1.2.0].json`  点我下载](https://www.tsginkgo.cn/tools-kqy/sss/download/files/Standards[v1.2.0].json)
+- 需搭配 [`SSS体测登记模板[v1.1.0].xlsx`  点我下载](https://www.tsginkgo.cn/tools-kqy/sss/download/files/SSS%E4%BD%93%E6%B5%8B%E7%99%BB%E8%AE%B0%E6%A8%A1%E6%9D%BF[v1.1.0].xlsx) 使用
+- 评分细则 `json` 文件详见 [`Standards[v1.2.0].json`  点我下载](https://www.tsginkgo.cn/tools-kqy/sss/download/files/Standards[v1.2.0].json)
 
 ## 联系我
 如在使用过程中遇到困难或发现系统Bug欢迎联系作者：烤全羊KQY (Ksuserkqy)
